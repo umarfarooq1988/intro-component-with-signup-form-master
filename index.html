@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Poppins:wght@400;500;600;700&display=swap">
+   
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+   
+
+      body { 
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      background-image: url(./images/bg-intro-mobile.png);
+      background-color: #ff7a7a;
+      
+      }
+
+      .right input,
+.right button[type = submit] {
+    border: 1.3px solid #b9b6d3;
+    outline: none;
+    color: #3e3c49;
+    font-size: 1rem;
+    font-weight: 600;
+
+}
+
+.right input::placeholder {
+    color: #808080;
+    font-size: 1rem;
+    font-weight: 600;
+    
+}
+
+.right input:focus {
+    border: 1.5px solid #3e3c49;
+}
+
+.right button[type = submit]:hover {
+    background-color: #77e2b4;
+}
+
+.right button[type = submit] {
+    color: #ffffff;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="main md:h-screen flex md:flex-row flex-col justify-center items-center md:px-[100px] px-12">
+        <div class="left text-white md:text-left text-center md:mt-0 mt-5 flex-1 mb-8">
+          <h1 class="font-semibold text-4xl mb-3 text-[#ffffff]">
+            Learn to code by <br />
+            watching others
+          </h1>
+          <p class="w-[500px]">
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </div>
+
+        <div class="right flex-1">
+          <div class="bg-[#5D54A3] hover:bg-[#403a71] text-center py-5 mb-5 shadow-xl text-white rounded-lg cursor-pointer">
+            <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
+          </div>
+          <div class="bg-[#ffffff] p-5 rounded-lg shadow-md">
+            <form id="myForm" action="#">
+              <div class="relative">
+                <img
+                  id="firstname-warning"
+                  src="./images/icon-error.svg"
+                  class="absolute right-3 md:top-5 top-4 opacity-0"
+                  alt="error-img"
+                />
+                <input class="w-full py-3 rounded-md pl-5"
+                  type="text"
+                  id="firstname"
+                  name="firstName"
+                  placeholder="First Name"
+                />
+                <p
+                  id="firstname-error"
+                  class="text-sm text-end text-red-400 opacity-0"
+                >
+                  First name cannot be empty
+                </p>
+              </div>
+              <div class="relative">
+                <img
+                  id="lastname-warning"
+                  src="./images/icon-error.svg"
+                  class="absolute right-3 md:top-5 top-4 opacity-0"
+                  alt="error-img"
+                />
+                <input class="w-full py-3 rounded-md pl-5"
+                  type="text"
+                  id="lastname"
+                  name="lastName"
+                  placeholder="Last Name"
+                />
+                <div
+                  id="lastname-error"
+                  class="text-sm text-end text-red-400 opacity-0"
+                >
+                  Last name cannot be empty
+              </div>
+              </div>
+              <div class="relative">
+                <img
+                  id="email-warning"
+                  src="./images/icon-error.svg"
+                  class="absolute right-3 md:top-5 top-4 opacity-0"
+                  alt="error-img"
+                />
+                <input class="w-full py-3 rounded-md pl-5"
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="Email Address"
+                />
+                <p
+                  id="empty-email-error"
+                  class="absolute right-0 text-sm text-end text-red-400 opacity-0"
+                >
+                  Email cannot be empty
+                </p>
+                <p
+                  id="invalid-email-error"
+                  class="text-sm text-end text-red-400 opacity-0"
+                >
+                  Looks like this is not an email
+                </p>
+              </div>
+              <div class="relative">
+                <img
+                  id="password-warning"
+                  src="./images/icon-error.svg"
+                  class="absolute right-3 md:top-5 top-4 opacity-0"
+                  alt="error-img"
+                />
+                <input class="w-full py-3 rounded-md pl-5"
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Password"
+                />
+                <p
+                  id="empty-password-error"
+                  class="absolute right-0 text-sm text-end text-red-400 opacity-0"
+                >
+                  Password cannot be empty
+                </p>
+                <p
+                  id="invalid-password-error"
+                  class="text-sm text-end text-red-400 opacity-0"
+                >
+                  Password must be at least 8 characters
+                </p>
+              </div>
+              <button class="w-full py-4 rounded-md bg-[#38cc8c] font-medium gap-2" type="submit">Claim your free trial</button>
+              <p class="form-footer mt-[10px] text-[#b9b6d3] text-[12px] text-center">
+                By clicking the button, you are agreeing to our
+                <strong class="text-[#ff7a7a] font-semibold">Terms and Services</strong>
+              </p>
+            </form>
+          </div>
+        </div>
+    </div>
+    <!-- <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Umar Farooq</a>.
+      </p>
+    </footer> -->
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          // Prevent the default form submission behavior
+          event.preventDefault();
+
+          let firstName = document.getElementById("firstname").value;
+
+          let lastName = document.getElementById("lastname").value;
+
+          let email = document.getElementById("email").value;
+
+          let password = document.getElementById("password").value;
+
+          function validateEmail(email) {
+            // Regular expression for a basic email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Test the email against the regular expression
+            return emailRegex.test(email);
+          }
+
+          function validatePassword(password) {
+            // Define a regular expression for password validation
+            const passwordRegex =
+              /^[A-Za-z\d@$!%*?&]{8,}$/;
+
+            // Test the password against the regular expression
+            return passwordRegex.test(password);
+          }
+
+          let firstNameError = document.getElementById("firstname-error");
+          let firstNameWarning = document.getElementById("firstname-warning");
+
+          let lastNameError = document.getElementById("lastname-error");
+          let lastNameWarning = document.getElementById("lastname-warning");
+
+          let emptyEmailError = document.getElementById("empty-email-error");
+          let invalidEmailError = document.getElementById(
+            "invalid-email-error"
+          );
+          let emailWarning = document.getElementById("email-warning");
+
+          let emptyPasswordError = document.getElementById(
+            "empty-password-error"
+          );
+          let invalidPasswordError = document.getElementById(
+            "invalid-password-error"
+          );
+          let passwordWarning = document.getElementById("password-warning");
+
+          if (!firstName) {
+            firstNameError.classList.remove("opacity-0");
+            firstNameWarning.classList.remove("opacity-0");
+          } else {
+            firstNameError.classList.add("opacity-0");
+            firstNameWarning.classList.add("opacity-0");
+          }
+
+          if (!lastName) {
+            lastNameError.classList.remove("opacity-0");
+            lastNameWarning.classList.remove("opacity-0");
+          } else {
+            lastNameError.classList.add("opacity-0");
+            lastNameWarning.classList.add("opacity-0");
+          }
+
+          if (!email) {
+            emptyEmailError.classList.remove("opacity-0");
+            emailWarning.classList.remove("opacity-0");
+          } else if (!validateEmail(email)) {
+            invalidEmailError.classList.remove("opacity-0");
+            emptyEmailError.classList.add("opacity-0");
+          } else {
+            invalidEmailError.classList.add("opacity-0");
+            emailWarning.classList.add("opacity-0");
+          }
+
+          if (!password) {
+            emptyPasswordError.classList.remove("opacity-0");
+            passwordWarning.classList.remove("opacity-0");
+          } else if (!validatePassword(password)) {
+            emptyPasswordError.classList.add("opacity-0");
+            invalidPasswordError.classList.remove("opacity-0");
+            passwordWarning.classList.remove("opacity-0");
+          } else {
+            invalidPasswordError.classList.add("opacity-0");
+            passwordWarning.classList.add("opacity-0");
+          }
+
+          // Your custom logic or additional code can go here
+          // For example, you can perform form validation or send data using AJAX.
+        });
+    </script>
+  </body>
+</html>
